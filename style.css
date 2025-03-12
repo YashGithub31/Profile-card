@@ -1,0 +1,99 @@
+/* Reset default margins, paddings, and apply a consistent box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the card on the page */
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh; /* Ensure full height */
+    background-color: #f3f4f6; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Profile Card Styling */
+.card {
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;
+    padding: 20px;
+    width: 90%; /* Responsive width */
+    max-width: 350px; /* Maximum width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for card */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image fills the space */
+    border: 3px solid #007bff; /* Blue border */
+}
+
+/* Name and Designation Styling */
+.name {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+}
+
+.designation {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Short Bio Styling */
+.bio {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+/* Style for Social Media Links */
+.social-icons a {
+    margin: 0 10px;
+    color: #007bff; /* Blue color */
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+/* Hover Effect for Social Media Icons */
+.social-icons a:hover {
+    color: #0056b3; /* Darker blue */
+    transform: scale(1.2) rotate(5deg); /* Slight rotation */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 400px) {
+    .card {
+        width: 90%; /* Ensures it adapts to small screens */
+        padding: 15px;
+    }
+}
